@@ -1,0 +1,75 @@
+.item {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #aeaeae;
+}
+
+.itemHeader {
+    display: flex;
+    align-items: center;
+}
+
+.itemAva {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    flex: 0 0 auto;
+    margin-right: 15px;
+}
+
+.itemName a {
+    color: #02436e;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.itemName span {
+    display: block;
+    font-size: 13px;
+    padding: 5px 0px 0px 0px;
+}
+
+.itemText {
+    padding: 15px 0px 30px 95px;
+    font-size: 14px;
+}
+
+.itemButtons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 15px;
+}
+
+.buttonLike {
+    border: 1px solid #2e8d36;
+    color: #2e8d36;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 30px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.buttonDisLike {
+    border: 1px solid #da0202;
+    color: #da0202;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 30px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.likeCounts {
+    padding: 0px 15px;
+    font-weight: 700;
+    color: #2e8d36;
+    font-size: 18px;
+}

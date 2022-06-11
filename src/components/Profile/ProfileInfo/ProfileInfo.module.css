@@ -1,0 +1,13 @@
+.profileHeaderImg {
+  margin-bottom: 15px;
+}
+
+.profileWrapper {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.profileAva {
+  width: 250px;
+  margin-right: 20px;
+}

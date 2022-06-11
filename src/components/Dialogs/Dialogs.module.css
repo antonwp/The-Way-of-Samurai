@@ -1,0 +1,85 @@
+.dialogs__title {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.dialogs__wrapper {
+    display: flex;
+}
+
+.dialogs__list {
+    flex: 0 0 auto;
+    width: 250px;
+    padding-right: 15px;
+}
+
+.dialogs__messages {
+    flex: 1 1 auto;
+}
+
+.dialogs__message_i {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+.dialogs__message_i .dialogs__message {
+    background-color: #c0eef7;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.dialogs__message_me {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+}
+
+.dialogs__message_me .dialogs__message {
+    background-color: #fce1f8;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.dialogs__item {
+    padding-bottom: 5px;
+}
+
+.dialogs__item a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 5px;
+}
+
+.dialogs__item a:hover,
+.dialogs__item a.active {
+    color: #fff;
+    background-color: #5fc7f8;
+}
+
+.dialogs__textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    resize: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dialogs__sendButton {
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
