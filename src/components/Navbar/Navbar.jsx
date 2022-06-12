@@ -16,6 +16,11 @@ function Navbar() {
                     </NavLink>
                 </li>
                 <li>
+                    <NavLink className={navData => navData.isActive ? classes.active : classes.link} to="/users">
+                        Пользователи
+                    </NavLink>
+                </li>
+                <li>
                     <NavLink className={navData => navData.isActive ? classes.active : classes.link} to="/news">
                         Новости
                     </NavLink>
