@@ -1,44 +1,16 @@
+import * as axios from 'axios';
 import React from 'react';
 import classes from './Users.module.css';
+import userPhoto from '../../img/users-ava/3.jpg';
 
 function Users(props) {
     if (props.users.length === 0) {
-        props.setUsers(
-            [
-                {
-                    id: 1,
-                    photoUrl: '/img/users-ava/1.jpg',
-                    followed: false,
-                    fullName: 'Sauri',
-                    status: 'Цитата - статус',
-                    location: {city: 'Moscow', country: 'Russia'}
-                },
-                {
-                    id: 2,
-                    photoUrl: '/img/users-ava/2.jpg',
-                    followed: true,
-                    fullName: 'Lera',
-                    status: 'Цитата - статус',
-                    location: {city: 'Moscow', country: 'Russia'}
-                },
-                {
-                    id: 3,
-                    photoUrl: '/img/users-ava/3.jpg',
-                    followed: false,
-                    fullName: 'Anna',
-                    status: 'Цитата - статус',
-                    location: {city: 'Moscow', country: 'Russia'}
-                },
-                {
-                    id: 4,
-                    photoUrl: '/img/users-ava/4.jpg',
-                    followed: true,
-                    fullName: 'Yana',
-                    status: 'Цитата - статус',
-                    location: {city: 'Moscow', country: 'Russia'}
-                },
-            ]
-        );
+
+        axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+            props.setUsers(response.data.items);
+        });
+
+        
     }
     
     return <div>
@@ -46,7 +18,7 @@ function Users(props) {
             props.users.map( u => <div key={u.id}>
                 <div>
                     <div>
-                        <img className={classes.userAvaImg} src={u.photoUrl} alt={u.fullName} />
+                        <img className={classes.userAvaImg} src={u.photos.small != null ? u.photos.small : userPhoto} alt={u.name} />
                     </div>
                     <div>
                         { u.followed
@@ -55,10 +27,10 @@ function Users(props) {
                     </div>
                 </div>
                 <div>
-                    <div>{u.fullName}</div> 
+                    <div>{u.name}</div> 
                     <div>{u.status}</div>
-                    <div>{u.location.country}</div>
-                    <div>{u.location.city}</div>
+                    <div>{"u.location.country"}</div>
+                    <div>{"u.location.city"}</div>
                 </div>
             </div>)
         }
